@@ -37,7 +37,7 @@ int main() {
 	
 	system("cls");
 	
-	// ---------------------------------------- IMPRESS√O
+	// ---------------------------------------- IMPRESS√ÉO
 	
 	i = 1;
 	printf("\n\n");
@@ -46,24 +46,24 @@ int main() {
 	do {
 		
 		printf("	|		\n");
-		printf("	|	Cadastro N∫ %i\n", i);
+		printf("	|	Cadastro N¬∫ %i\n", i);
 		printf("	|	\n");
 		printf("	|	Aluno(a): %s\n", nome[i]);
 		
-	 // ---------------------------------------- CONDI«√O
+	 // ---------------------------------------- CONDI√á√ÉO
 	
 		if ((media[i] >= 9) && (media[i] <= 10)) {
 			
-			printf("	|	MÈdia: %.2f\n", media[i]);
+			printf("	|	M√©dia: %.2f\n", media[i]);
 			printf("	|	Resultado final: Aprovado\n");
 			printf("	|		\n");
 			
-			printf("	|	VocÍ pode escolher uma viagem!\n");
+			printf("	|	Voc√™ pode escolher uma viagem!\n");
 			printf("	|	\n");
-			printf("	|	[1 - Salvador]\n	|	[2 - Curitiba]\n	|	[3 - BrasÌlia]\n");
+			printf("	|	[1 - Salvador]\n	|	[2 - Curitiba]\n	|	[3 - Bras√≠lia]\n");
 			printf("	|	\n");
 			
-			printf("	|	Informe o cÛdigo referente a viagem que deseja: ");
+			printf("	|	Informe o c√≥digo referente a viagem que deseja: ");
 			fflush(stdin);
 			scanf("%i", &option[i]);
 			printf("	|	\n");
@@ -81,27 +81,26 @@ int main() {
 				break;
 				
 				case 3:
-				printf("	|	A viagem escolhida foi para BrasÌlia!\n");
+				printf("	|	A viagem escolhida foi para Bras√≠lia!\n");
 				printf("	|	\n");
 				break;
 			}
 				
 		} else if ((media[i] >= 7) && (media[i] <= 10)) {
 				
-			printf("	|	MÈdia: %.2f\n", media[i]);
+			printf("	|	M√©dia: %.2f\n", media[i]);
 			printf("	|	Resultado final: Aprovado\n");
 			printf("	|	\n");
-
 					
 		} else if ((media[i] < 7) && (media[i] > 0)) {
 			
-			printf("	|	MÈdia: %.2f\n", media[i]);	
+			printf("	|	M√©dia: %.2f\n", media[i]);	
 			printf("	|	Resultado final: Reprovado\n");
 			printf("	|	\n");
 
 		} else {
 			
-			printf("	|	[!] - Valores inv·lidos nas notas.\n");
+			printf("	|	[!] - Valores inv√°lidos nas notas.\n");
 			printf("	|	\n");
 			
 		}
