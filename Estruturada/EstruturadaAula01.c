@@ -4,7 +4,7 @@
 
 	float valor1, valor2, media;
 	
-	void cadastrar() { // função: cadastrar dois valores
+	void cadastrar() { // funÃ§Ã£o: cadastrar dois valores
 		printf("Digite o primeiro valor: ");
 		fflush(stdin);
 		scanf("%f", &valor1);
@@ -14,15 +14,15 @@
 		scanf("%f", &valor2);
 	}
 	
-	void fx_media() { // função que  calcula a média
+	void fx_media() { // funÃ§Ã£o que  calcula a mÃ©dia
 		
 		media = (valor1 + valor2) / 2;
 	}
 	
-	void mostrar_resultado() { // função que imprime
+	void mostrar_resultado() { // funÃ§Ã£o que imprime
 		
 		printf("\n------------------------------\n");
-		printf("\n\nA média é: %.1f\n", media);
+		printf("\n\nA mÃ©dia Ã©: %.1f\n", media);
 		
 		if ((media >= 7) && (media <= 10)) {
 			
