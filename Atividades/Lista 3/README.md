@@ -22,6 +22,23 @@
 1. Ao sair, surge a mensagem (PROGRAMA FINALIZADO!)
 2. Quando o cliente finalizar uma das 3 opções, o programa volta para o menu principal. (1pto)
 
-// && (retorne == 'sim') || (retorne == 'SIM') || (retorne == 'Sim') || (retorne == 'S') || (retorne == 's'))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// && ((retorne == 'sim') || (retorne == 'SIM') || (retorne == 'Sim') || (retorne == 'S') || (retorne == 's'))
 
 // (((strcmp(retorne,'sim') == 0) || strcmp(retorne,'SIM') == 0 || strcmp(retorne, 'Sim') == 0 || strcmp(retorne, 'S') == 0 || strcmp(retorne,'s' == 0)))
+
+case 1:
+                        strcpy(carroSelected, "Genesis gv80");
+                        precoDoCarro = 8300900;
+                    break;    
+
+                    case 2:
+                        strcpy(carroSelected, "Porsche Panamera");
+                        precoDoCarro = 270150;
+                    break;
+
+                    case 3:
+                        strcpy(carroSelected, "Mercedes Benz GT 63S");
+                        precoDoCarro = 340160;
+                    break;
