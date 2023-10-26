@@ -8,12 +8,13 @@ Aponta para um endereco onde esta o valor da variavel;
 Sempre em hexdecimal (0x);
 
 Bloco de Controle de Processo (BCP)
-
+``` c
 |stack      |
 |           |
 |Heap       |
 |DAdos      |
 |Texto(cod) |
+```
 
 O tipo da var ponteiro precisa ser do mesmo tipo da variavel x;
 
