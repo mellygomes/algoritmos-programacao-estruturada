@@ -1,6 +1,6 @@
 # OFICINA DE PONTEIRO DIA 24/10
 
-###### Uma variavel x aponta para um endereco de memoria;
+#### Uma variavel x aponta para um endereco de memoria;
 
 O asterisco antes da variavel indica que ele e um ponteiro.
 O endereco e O SO que escolhe;
