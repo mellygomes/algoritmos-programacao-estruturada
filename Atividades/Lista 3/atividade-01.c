@@ -228,7 +228,6 @@ int main() {
                 
                 case 4:
                 	system("cls");
-                	printf("\n\n Deseja realmente sair do programa ou ");
                 break;
 
                 default:
