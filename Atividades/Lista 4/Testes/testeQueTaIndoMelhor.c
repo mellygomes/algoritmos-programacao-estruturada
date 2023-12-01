@@ -12,13 +12,14 @@ int contClientes = 0, contAngendamento = 0, contConcultas = 0;
 
 //apresentar_titulo
 void apresentar_titulo() {
-    printf("\n\n\t\t\t === Super_Petshop_Emanuelly_CC ===\n\n");
+    printf("\n\n\t\t\t (^-^) + Super_Petshop_Emanuelly_CC + (^-^)\n\n");
 }
 
 // fucao para verificar senha
 void verificar_senha() {
+    setlocale(LC_ALL, "Portuguese");
     do {
-        printf("\n\nInsira sua senha para iniciar: ");
+        printf("Insira sua senha para iniciar: ");
         fflush(stdin);
         gets(senha);
 
@@ -29,6 +30,7 @@ void verificar_senha() {
         
         } else if (strcmp(senha, "patinha") != 0) {
             system("cls");
+            apresentar_titulo();
             printf("\nSenha Incorreta! Tente novamente: \n");
         }
 
@@ -44,6 +46,7 @@ struct cadastro {
 
 //funcao para cadastrar cliente (referente a opcao 1 do menu principal)
 void emanuelly(struct cadastro cliente[], int contClientes) {
+    setlocale(LC_ALL, "Portuguese");
     printf("Cliente %i\n", contClientes + 1);
     printf("Nome: ");
     fflush(stdin);
@@ -60,57 +63,59 @@ void emanuelly(struct cadastro cliente[], int contClientes) {
 
 // funcao para o agendamento de servico (referente a opcao 2 do menu principal)
 void agendamento() {
-        int opcaoDeAgendamento;
-        system("cls");
-        apresentar_titulo();
+    setlocale(LC_ALL, "Portuguese");
+    int opcaoDeAgendamento;
+    system("cls");
+    apresentar_titulo();
 
-        printf("Nome do Pet para o serviço: ");
+    printf("Nome do Pet para o servi�o: ");
+    fflush(stdin);
+    fgets(nomePetAgendamento[contAngendamento], 50, stdin);
+
+    do {
+        printf("\nOp��es de agendamento para o Pet %s\n\n", nomePetAgendamento[contAngendamento]);
+        printf("[1] - Banho\n");
+        printf("[2] - Tosa\n");
+        printf("[3] - Banho e tosa\n");
+        printf("Informe a op��o que deseja: ");
         fflush(stdin);
-        fgets(nomePetAgendamento[contAngendamento], 50, stdin);
+        scanf("%i", &opcaoDeAgendamento);
 
-        do {
-            printf("\nOpções de agendamento para o Pet %s\n\n", nomePetAgendamento[contAngendamento]);
-            printf("[1] - Banho\n");
-            printf("[2] - Tosa\n");
-            printf("[3] - Banho e tosa\n");
-            printf("\nInforme a opção que deseja: ");
-            fflush(stdin);
-            scanf("%i", &opcaoDeAgendamento);
+        switch (opcaoDeAgendamento) {   // modulo para escolha do agendamento
+            case 1:
+                strcpy(opcaoDeAgendamentoSelecionada[contAngendamento], "Banho");
+            break;
 
-            switch (opcaoDeAgendamento) {   // modulo para escolha do agendamento
-                case 1:
-                    strcpy(opcaoDeAgendamentoSelecionada[contAngendamento], "Banho");
-                break;
+            case 2:
+                strcpy(opcaoDeAgendamentoSelecionada[contAngendamento], "Tosa");
+            break;
 
-                case 2:
-                    strcpy(opcaoDeAgendamentoSelecionada[contAngendamento], "Tosa");
-                break;
+            case 3:
+                strcpy(opcaoDeAgendamentoSelecionada[contAngendamento], "Banho e tosa");
+            break;
+            
+            default:
+                system("cls");
+                apresentar_titulo();
+                printf("\nOp��o inv�lida! Tente novamente\n");
+            break;
+        }
 
-                case 3:
-                    strcpy(opcaoDeAgendamentoSelecionada[contAngendamento], "Banho e tosa");
-                break;
-                
-                default:
-                    printf("\nOpção selecionada inválida!\n");
-                    // sleep(1);
-                break;
-            }
-        } while ((opcaoDeAgendamento < 0) && (opcaoDeAgendamento > 4));
+    } while ((opcaoDeAgendamento <= 0) || (opcaoDeAgendamento > 3));
 
-    }
+}
 
 // funcao para marcacao de cconsulta (referente a opcao 3 do menu principal)
 void marcar_data_da_consulta() {
+    setlocale(LC_ALL, "Portuguese");
+    // system("cls");
     int opcaoDeConsulta;
-    // int i = 0;
+    apresentar_titulo();
     do {
-        system("cls");
-        apresentar_titulo();
-
-        printf("Datas disponíveis para consulta\n");
+        printf("Datas dispon�veis para consulta\n");
         printf("[1] - Quarta-feira\n");
-        printf("[2] - Sábado\n\n");
-        printf("Informe a opção que deseja: ");
+        printf("[2] - S�bado\n\n");
+        printf("Informe a op��o que deseja: ");
         fflush(stdin);
         scanf("%i", &opcaoDeConsulta);
 
@@ -120,20 +125,22 @@ void marcar_data_da_consulta() {
             break;
 
             case 2:
-                strcpy(opcaoDeDataDeConsultaSelecionada[contConcultas], "Sábado");
+                strcpy(opcaoDeDataDeConsultaSelecionada[contConcultas], "S�bado");
             break;
             
             default:
-                printf("\nOpcao era invalida! Tente novamente");
-                // sleep(1);
+                system("cls");
+                apresentar_titulo();
+                printf("\nOp��o inv�lida! Tente novamente\n");
             break;
         }
 
-    } while ((opcaoDeConsulta != 1) && (opcaoDeConsulta != 2));
+    } while ((opcaoDeConsulta <= 0) || (opcaoDeConsulta > 2));
 }
 
 // funcao para impressao do relatorio geral (referente a opcao 4 do menu principal)
 void imprimir_relatorio_geral(struct cadastro cliente[]) {
+    setlocale(LC_ALL, "Portuguese");
     apresentar_titulo();
 
     // -> referente impressao de cadastro de clientes
@@ -184,10 +191,10 @@ void imprimir_relatorio_geral(struct cadastro cliente[]) {
 
 // funcao do menu principal
 void menu_principal(struct cadastro cliente[]) {
-
+    setlocale(LC_ALL, "Portuguese");
     int i = 0;
+    apresentar_titulo();
     do {
-        apresentar_titulo();
         printf("[1] - Cadastrar Cliente\n");
         printf("[2] - Agendar banho ou tosa\n");
         printf("[3] - Consulta\n"); 
@@ -202,13 +209,15 @@ void menu_principal(struct cadastro cliente[]) {
                 if (contClientes < 10) {
                     system("cls");
                     apresentar_titulo();
-                    printf("Preencha as informações\n\n");
+                    printf("Preencha as informa��es\n\n");
                     emanuelly(cliente, contClientes);
                     contClientes++;
                     system("cls");
+                    apresentar_titulo();
 
                 } else {
                     system("cls");
+                    apresentar_titulo();
                     printf("\n\nLimite excedido!\n");
                 }
             break;
@@ -217,42 +226,54 @@ void menu_principal(struct cadastro cliente[]) {
                 if (contAngendamento < 10) {
                     agendamento();
                     contAngendamento++;
+                    system("cls");
+                    apresentar_titulo();
 
                 } else {
                     system("cls");
+                    apresentar_titulo();
                     printf("Limite excedido!");
                 }
-                system("cls");
             break;
 
             case 3:
                 if (contConcultas < 10) {
-
+                    system("cls");
                     marcar_data_da_consulta(cliente, contAngendamento);
 
-                    printf("\n\nLista de clientes cadastrados:\n");
                     if (contClientes == 0) {
-                            printf("\nNenhum cliente foi cadastrado, cadastre um cliente\n\n");
+                        system("cls");
+                        apresentar_titulo();
+                        printf("Nenhum cliente foi cadastrado ainda. Cadastre um cliente primeiro\n\n");
                     } else {
-                        for (i = 0; i < contClientes; i++) {
-                            printf("[%i]: %s\n", i + 1, cliente[i].nomeCliente);    
-                        }
 
                         do {
+                            printf("\nLista de clientes cadastrados:\n\n");
+                            for (i = 0; i < contClientes; i++) {
+                                printf("[%i] - %s\n", i + 1, cliente[i].nomeCliente);    
+                            }
+
                             printf("Informe o numero do cliente para o qual deseja marcar a consulta: ");
                             fflush(stdin);
                             scanf("%i", &opcaoDeCliente);
-                        } while ((opcaoDeCliente < 0) && (opcaoDeCliente <= contClientes));
+
+                            if ((opcaoDeCliente < 1) || (opcaoDeCliente - 1 >= contClientes)) {
+                                system("cls");
+                                apresentar_titulo();
+                                printf("Opcão Iválida! Tente novamente\n");
+                            }
+
+                        } while ((opcaoDeCliente < 1) || (opcaoDeCliente - 1 >= contClientes));
 
                         strcpy(opcaoDeClienteSelecionado[contConcultas], cliente[opcaoDeCliente - 1].nomeCliente);
 
                         system("cls");
+                        apresentar_titulo();
                         do {
-                            apresentar_titulo();
                             printf("Marcar consulta %s para: %s com:", opcaoDeDataDeConsultaSelecionada[contConcultas], opcaoDeClienteSelecionado[contConcultas]);
                             printf("\n[1] - Dra. Emanuelly");
                             printf("\n[2] - Dr. Fabiano\n");
-                            printf("Informe a opção que deseja: ");
+                            printf("Informe a op��o que deseja: ");
                             fflush(stdin);
                             scanf("%i", &opcaoDeDoutor);
 
@@ -267,7 +288,8 @@ void menu_principal(struct cadastro cliente[]) {
 
                                 default:
                                     system("cls");
-                                    printf("\n\nOpcão inválida! tente novamente\n\n");
+                                    apresentar_titulo();
+                                    printf("\n\nOpc�o inv�lida! tente novamente\n\n");
                                 break;
                             }
 
@@ -275,13 +297,15 @@ void menu_principal(struct cadastro cliente[]) {
 
                         printf("\n\n");
                         contConcultas++;
+                        system("cls");
+                        apresentar_titulo();
                     }
                 
                 } else {
                     system("cls");
+                    apresentar_titulo();
                     printf("Limite excedido!");
                 }
-                system("cls");
             break;
 
             case 4:
@@ -290,6 +314,7 @@ void menu_principal(struct cadastro cliente[]) {
                 printf("\n\n");
                 system("pause");
                 system("cls");
+                apresentar_titulo();
             break;
 
             case 5:
@@ -300,7 +325,7 @@ void menu_principal(struct cadastro cliente[]) {
             default:
                 system("cls");
                 apresentar_titulo();
-                printf("\n\nOpção inválida! Tente novamente\n\n");
+                printf("\n\nOp��o inv�lida! Tente novamente\n\n");
             break;
         }
 
@@ -308,9 +333,9 @@ void menu_principal(struct cadastro cliente[]) {
 }
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     struct cadastro cliente[10];
 
-    setlocale(LC_ALL, "Portuguese");
     apresentar_titulo();
     verificar_senha();
     menu_principal(cliente);
