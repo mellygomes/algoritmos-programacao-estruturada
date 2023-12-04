@@ -10,7 +10,7 @@ main(void){
 	setlocale(LC_ALL, "Portuguese");
 	
 	enum Ano mes;
-	printf("Escolha um mês:\n\n[1] - Janeiro\n[2] - Fevereiro\n[3] - Março\n[4] - Abril\n[5] - Maio\n[6] - Junho\n[7] - Julho\n[8] - Agosto\n");
+	printf("Escolha um mÃªs:\n\n[1] - Janeiro\n[2] - Fevereiro\n[3] - MarÃ§o\n[4] - Abril\n[5] - Maio\n[6] - Junho\n[7] - Julho\n[8] - Agosto\n");
 	printf("[9] - Setembro\n[10] - Outubro\n[11] - Novembro\n[12] - Dezembro\n\n");
 	fflush(stdin);
 	scanf("%i", &mes);
@@ -19,55 +19,55 @@ main(void){
 	
 	switch(mes){
 		case janeiro:
-			printf("Mês de Janeiro");
+			printf("MÃªs de Janeiro");
 			break;
 			
 		case fevereiro:
-			printf("Mês de Fevereiro");
+			printf("MÃªs de Fevereiro");
 			break;
 			
 		case marco:
-			printf("Mês de Março");
+			printf("MÃªs de MarÃ§o");
 			break;
 			
 		case abril:
-			printf("Mês de Abril");
+			printf("MÃªs de Abril");
 			break;
 			
 		case maio:
-			printf("Mês de Maio");
+			printf("MÃªs de Maio");
 			break;
 			
 		case junho:
-			printf("Mês de Junho");
+			printf("MÃªs de Junho");
 			break;
 			
 		case julho:
-			printf("Mês de Julho");
+			printf("MÃªs de Julho");
 			break;
 			
 		case agosto:
-			printf("Mês de Agosto");
+			printf("MÃªs de Agosto");
 			break;
 			
 		case setembro:
-			printf("Mês de Setembro");
+			printf("MÃªs de Setembro");
 			break;
 			
 		case outubro:
-			printf("Mês de Outubro");
+			printf("MÃªs de Outubro");
 			break;
 			
 		case novembro:
-			printf("Mês de Novembro");
+			printf("MÃªs de Novembro");
 			break;
 			
 		case dezembro:
-			printf("Mês de Dezembro");
+			printf("MÃªs de Dezembro");
 			break;
 			
 		default:
-			printf("Inválido");		
+			printf("InvÃ¡lido");		
 	}
 	
 	return 0;
