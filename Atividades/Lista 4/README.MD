@@ -5,7 +5,7 @@ OUTROS PROGRAMAS OU LINGUAGENS SERÃO DESCONSIDERADOS NA CORREÇÃO.
 *	Salvar com extensão .c 
 *	Não enviar em PDF, Texto ou CPP
 
-## Desenvolver um programa para um petshop:
+# Desenvolver um programa para um petshop:
 **O programa solicita a senha (senha correta: “patinha”) -> (1 pto)**
 *   Se a senha for errada, solicita novamente, se for correta, entra no sistema.              
 *   A senha não tem quantidade de tentativas. Nem pausa ou sleep. 
