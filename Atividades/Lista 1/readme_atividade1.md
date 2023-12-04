@@ -85,7 +85,7 @@ Inicio
    escreva("Total à pagar: R$ (ida e volta)", total)
    escreval
    
-   //fim da imoressão
+   //fim da impressão
 
 Fimalgoritmo
 
