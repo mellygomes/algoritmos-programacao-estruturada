@@ -1,7 +1,7 @@
 # Lista 1
 **A lista 1 foi desenvolvida em portugol, com o intuito de dar entrada à lógica de programação. O código foi feito no programa Visual G, e aqui será escrito por meio dos readme's**
 
-Nota: as demais listas forão reslizadas em C
+Nota: as demais listas forão realizadas em C
 
 ## Atividade 1:
 ### Desenvolver um programa para uma agêncai de viagem
